@@ -32,6 +32,18 @@
 		}
 		
 		
-		
-	
+		//PROGRESS BAR
+	textView = findViewById(R.id.id_TV_an);
+        seekBar = findViewById(R.id.id_seekBar);
+        Intent intent = getIntent();
+        pers = intent.getParcelableExtra("Date Persoana");
+
+
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                int text = 1939 + i;
+                String texts = Integer.toString(text);
+                textView.setText(texts);
+            }
 		
